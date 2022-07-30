@@ -23,7 +23,8 @@ dotenv.config({
 // all the API REST, GraphQL, authentication, file uploads, data layer and admin UI is built from the config
 export default buildConfig({
   // the serverURL can be localhost:, a public domain or simply left undefined to work with relative
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
+  serverURL: process.env.PAYLOAD_PUBLIC_BASE_DNS,
+  upload: { staticURL: '/uploads', staticDir: '/uploads' },
   admin: {
     // the user collection slug to use for authenticating to the admin panel, one per express app
     user: Users.slug,
