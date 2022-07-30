@@ -24,6 +24,12 @@ dotenv.config({
 export default buildConfig({
   // the serverURL can be localhost:, a public domain or simply left undefined to work with relative
   serverURL: process.env.PAYLOAD_PUBLIC_BASE_DNS,
+  csrf: [
+    'http://localhost:3000'
+  ],
+  cors: [
+     'http://localhost:3000'
+  ],
   upload: { staticURL: '/uploads', staticDir: '/uploads' },
   admin: {
     // the user collection slug to use for authenticating to the admin panel, one per express app
