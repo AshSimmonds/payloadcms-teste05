@@ -10,7 +10,9 @@ const BeforeDashboard: React.FC = () => {
 		<div className={baseClass}>
 			<Banner type="success">
 				<Check />
-				<strong>Payload is completely free and open-source.</strong> If you like what we're doing, <a href="https://github.com/payloadcms/payload" target="_blank">leave us a star on GitHub!</a>
+				<strong>Cleared for blast-off.</strong><br />
+				<br />
+				<small>Customise this in: <pre><a href="https://github.com/AshSimmonds/payloadcms-teste05/tree/master/src/components/BeforeDashboard" >src\components\BeforeDashboard\index.tsx</a></pre></small>
 			</Banner>
 		</div>
 	);

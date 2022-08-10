@@ -51,6 +51,10 @@ export default buildConfig({
       afterDashboard: [
         AfterDashboard,
       ],
+      // graphics: {
+      //   Icon: MyCustomIcon,
+      //   Logo: MyCustomLogo,
+      // },
     },
   },
 

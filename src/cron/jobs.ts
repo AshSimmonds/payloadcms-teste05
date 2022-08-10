@@ -6,4 +6,4 @@ const cronOptions: cron.ScheduleOptions = {
   scheduled: false,
 };
 
-export const resetScheduledJob = cron.schedule('0 * * * *', reset, cronOptions);
+// export const resetScheduledJob = cron.schedule('0 * * * *', reset, cronOptions);

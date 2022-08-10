@@ -4,9 +4,8 @@ const BeforeLogin: React.FC = () => {
 	return (
 		<div>
 			<p>
-				To log in, use the email <strong>demo@payloadcms.com</strong> with the password <strong>demo</strong>. This demo CMS will reset every hour.
+				Prepare for blast-off.
 			</p>
-			<p>The code for this demo is open source and can be found <a href="https://github.com/payloadcms/public-demo" target="_blank" rel="noopener noreferrer">here</a>.</p>
 		</div>
 	);
 };

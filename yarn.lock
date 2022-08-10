@@ -6682,22 +6682,6 @@ pause@0.0.1:
   resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha512-KG8UEiEVkR3wGEb4m5yZkVCzigAD+cVEJck2CzYZO37ZGJfctvVptVO192MwrtPhzONn6go8ylnOdMhKqi4nfg==
 
-"payload-public-demo@file:.":
-  version "1.0.0"
-  dependencies:
-    "@faker-js/faker" "^6.0.0-alpha.5"
-    "@payloadcms/plugin-form-builder" "^1.0.2"
-    "@payloadcms/plugin-nested-docs" "^1.0.3"
-    "@payloadcms/plugin-seo" "^1.0.6"
-    copyfiles "^2.4.1"
-    dotenv "^8.2.0"
-    express "^4.17.1"
-    mongodb "^4.3.0"
-    node-cron "^3.0.0"
-    payload "^1.0.7"
-    payload-public-demo "file:../../Users/ashsi/AppData/Local/Yarn/Cache/v6/npm-payload-public-demo-1.0.0-c364b21f-6703-4173-8c12-26382f53c188-1659169788233/node_modules/payload-public-demo"
-    qs "^6.10.3"
-
 payload@^1.0.7:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/payload/-/payload-1.0.11.tgz#7faa383937f1cb5bf003e191c2fb1709966f9ada"
