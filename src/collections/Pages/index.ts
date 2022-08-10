@@ -20,10 +20,10 @@ export const Pages: CollectionConfig = {
     // defaultColumns is used on the listing screen in the admin UI for the collection
     defaultColumns: [
       'fullTitle',
-      'author',
-      'createdAt',
+      'slug',
       'status',
-    ],
+      'updatedAt',
+    ],    
   },
   // the access is set to allow read for anyone
   access: {
@@ -49,14 +49,14 @@ export const Pages: CollectionConfig = {
 		{
 			type: 'tabs',
 			tabs: [
+				// {
+				// 	label: 'Hero',
+				// 	fields: [
+				// 		hero,
+				// 	],
+				// },
 				{
-					label: 'Hero',
-					fields: [
-						hero,
-					],
-				},
-				{
-					label: 'Page Layout',
+					label: 'Page layout and content',
 					fields: [
 						{
 							name: 'layout',
@@ -149,13 +149,6 @@ export const Pages: CollectionConfig = {
       admin: {
         position: 'sidebar',
       },
-      hooks: {
-        afterChange: [
-          // tell Vercel to do some Incremental Static Regeneration magick
-          // https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
-          revalidateCache,
-        ],
-      },
     },
     {
       name: 'author',
@@ -166,6 +159,11 @@ export const Pages: CollectionConfig = {
           // By using a hook to set the author, admins cannot change the author as is allowed in the posts
           // collections that has a defaultValue property to populates it and allow changing in the UI
           populateAuthor,
+        ],
+        afterChange: [
+          // tell Vercel to do some Incremental Static Regeneration magick
+          // https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+          revalidateCache,
         ],
       },
       admin: {
