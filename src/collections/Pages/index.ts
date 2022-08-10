@@ -9,6 +9,7 @@ import MediaSlider from '../../blocks/MediaSlider';
 import { Accordion } from '../../blocks/Accordion';
 import { populateAuthor } from './hooks/populateAuthor';
 import { hero } from '../../fields/hero';
+import { revalidateCache } from './hooks/revalidateCache';
 
 export const Pages: CollectionConfig = {
   // the slug is used for naming the collection in the database and the APIs that are open. For example: api/pages/${id}
@@ -147,6 +148,13 @@ export const Pages: CollectionConfig = {
       index: true,
       admin: {
         position: 'sidebar',
+      },
+      hooks: {
+        afterChange: [
+          // tell Vercel to do some Incremental Static Regeneration magick
+          // https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+          revalidateCache,
+        ],
       },
     },
     {
