@@ -25,7 +25,6 @@
     "mongodb": "^4.3.0",
     "node-cron": "^3.0.0",
     "payload": "^1.0.7",
-    "payload-public-demo": "file:",
     "qs": "^6.10.3"
   },
   "devDependencies": {
