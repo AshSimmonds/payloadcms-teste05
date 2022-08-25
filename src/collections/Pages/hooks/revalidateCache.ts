@@ -8,18 +8,20 @@ export const revalidateCache: FieldHook = async ({ data, originalDoc }) =>{
   // TODO: add a secret key
   const theApiUrl = 'https://g0.wtf/api/revalidate?revalidatePath=/' + theSlug;
   
-  return fetch(theApiUrl); 
+  const response = fetch(theApiUrl);
+  
+  // return fetch(theApiUrl); 
 }
   
 
 
 
-// export const populateAuthor: FieldHook = async ({ req: { user }, value, operation}) => {
+export const populateAuthor: FieldHook = async ({ req: { user }, value, operation}) => {
 //   // using this hook only the original creator of the document can be the author
-//   if (operation === 'create') {
-//     return user?.id;
-//   }
+  if (operation === 'create') {
+    return user?.id;
+  }
 
 //   // when the operation is "update", return the original value so as not to change it
-//   return value;
-// };
+  return value;
+};

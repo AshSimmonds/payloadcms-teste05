@@ -86,6 +86,11 @@ export const Pages: CollectionConfig = {
           // custom hook function to save the title using breadcrumbs field data
           populateFullTitle,
         ],
+        // afterChange: [
+        //   // tell Vercel to do some Incremental Static Regeneration magick
+        //   // https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+        //   revalidateCache,
+        // ],
       },
       // to hide the field from the UI for the edit/create forms we can pass it a null value
       admin: {
